@@ -5,8 +5,8 @@ import java.math.*;
 
 class SystemC
 {
-  public static int step, startSumm, finalSumm, toDo, currDate, inpTime, again;
-  public static float percent;
+  public int step, startSumm, finalSumm, toDo, currDate, inpTime, again;
+  public float percent;
   
   public void intro()
   {
@@ -17,7 +17,7 @@ class SystemC
     System.out.println();
   }
   
-  public static int error(int err)
+  public int error(int err)
   {
     switch(err)
     {
@@ -32,29 +32,29 @@ class SystemC
     switch(step)
     {
       case 1:
-        SystemC.inputStSm();
+        inputStSm();
         break;
       case 2:
-        SystemC.inputPercent();
+        inputPercent();
         break;
       case 3:
-        SystemC.getAct();
+        getAct();
         break;
       case 4:
-        SystemC.inputFnSm();
+        inputFnSm();
         break;
       case 5:
-        SystemC.inputTime();
+        inputTime();
         break;
       case 7:
-        SystemC.askRestart();
+        askRestart();
         break;
     }
     
     return 0;
   }
   
-  public static int inputStSm()
+  public int inputStSm()
   {
     Scanner in = new Scanner(System.in);
     step = 1;
@@ -63,14 +63,14 @@ class SystemC
     
     if (startSumm <= 0)
     {
-        SystemC.error(0);
+      error(0);
     }
     
     System.out.println("");
     return startSumm;
   }
   
-  public static float inputPercent()
+  public float inputPercent()
   {
     Scanner in = new Scanner(System.in);
     step = 2;
@@ -79,7 +79,7 @@ class SystemC
     
     if (percent <= 0)
     {
-      SystemC.error(0);
+      error(0);
     }
     
     System.out.println("");
@@ -87,7 +87,7 @@ class SystemC
     return percent;
   }
   
-  public static int getAct()
+  public int getAct()
   {
     Scanner in = new Scanner(System.in);
     step = 3;
@@ -103,14 +103,14 @@ class SystemC
       toDo = 2;
     } else
     {
-      SystemC.error(2);
+      error(2);
     }
     
     System.out.println("");
     return toDo;
   }
   
-  public static int inputFnSm()
+  public int inputFnSm()
   {
     Scanner in = new Scanner(System.in);
     step = 4;
@@ -118,14 +118,14 @@ class SystemC
     finalSumm = in.nextInt();
     if (finalSumm <= 0)
     {
-      SystemC.error(0);
+      error(0);
     }
     
     System.out.println("");
     return finalSumm;
   }
   
-  public static int inputTime()
+  public int inputTime()
   {
     Scanner in = new Scanner(System.in);
     step = 5;
@@ -133,14 +133,14 @@ class SystemC
     inpTime = in.nextInt();
     if (inpTime <= 0)
     {
-      SystemC.error(0);
+      error(0);
     }
     
     System.out.println("");
     return inpTime;
   }
   
-  public static int calculate()
+  public int calculate()
   {
     step = 6;
     System.out.println("Calculating...");
@@ -174,7 +174,7 @@ class SystemC
     return 0;
   }
   
-  public static int askRestart()
+  public int askRestart()
   {
     Scanner in = new Scanner(System.in);
     step = 7;
@@ -185,7 +185,7 @@ class SystemC
     else if (answer.equalsIgnoreCase("no") || answer.equalsIgnoreCase("n")) again = 0;
     else
     {
-      SystemC.error(1);
+      error(1);
     }
     
    if (again == 1) 

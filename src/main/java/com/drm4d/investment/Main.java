@@ -7,8 +7,8 @@ public class Main
 {
   public static void main(String[] args)
   {
-    String version = "1.0";
-    String systemVersion = "J1AA1F04OC17";
+    String version = "1.1";
+    String systemVersion = "J1AA2F05OC17";
     SystemC s = new SystemC();
     s.intro();
     Main.start();
@@ -22,7 +22,7 @@ public class Main
     s.inputPercent();
     s.getAct();
     
-    if (SystemC.toDo == 1) s.inputFnSm();
+    if (s.toDo == 1) s.inputFnSm();
     else s.inputTime();
     
     s.calculate();
