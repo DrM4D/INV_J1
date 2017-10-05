@@ -8,7 +8,7 @@ class SystemC
   public int step, startSumm, finalSumm, toDo, currDate, inpTime, again;
   public float percent;
   
-  public void intro()
+  void intro()
   {
     step = 0;
     System.out.println("Welcome to Investment!");
@@ -17,7 +17,7 @@ class SystemC
     System.out.println();
   }
   
-  public int error(int err)
+  int error(int err)
   {
     switch(err)
     {
@@ -54,7 +54,7 @@ class SystemC
     return 0;
   }
   
-  public int inputStSm()
+  int inputStSm()
   {
     Scanner in = new Scanner(System.in);
     step = 1;
@@ -70,7 +70,7 @@ class SystemC
     return startSumm;
   }
   
-  public float inputPercent()
+  float inputPercent()
   {
     Scanner in = new Scanner(System.in);
     step = 2;
@@ -87,7 +87,7 @@ class SystemC
     return percent;
   }
   
-  public int getAct()
+  int getAct()
   {
     Scanner in = new Scanner(System.in);
     step = 3;
@@ -110,7 +110,7 @@ class SystemC
     return toDo;
   }
   
-  public int inputFnSm()
+  int inputFnSm()
   {
     Scanner in = new Scanner(System.in);
     step = 4;
@@ -125,7 +125,7 @@ class SystemC
     return finalSumm;
   }
   
-  public int inputTime()
+  int inputTime()
   {
     Scanner in = new Scanner(System.in);
     step = 5;
@@ -140,7 +140,7 @@ class SystemC
     return inpTime;
   }
   
-  public int calculate()
+  int calculate()
   {
     step = 6;
     System.out.println("Calculating...");
@@ -174,7 +174,7 @@ class SystemC
     return 0;
   }
   
-  public int askRestart()
+  int askRestart()
   {
     Scanner in = new Scanner(System.in);
     step = 7;
