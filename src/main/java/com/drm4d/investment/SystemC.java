@@ -22,10 +22,10 @@ class SystemC
     switch(err)
     {
       case 0:
-        System.out.println("Error #00: Nonpositive numer. Please, try again. ");
+        System.out.println("Error #00: Nonpositive numer. Please, try again.");
         break;
       case 1:
-        System.out.println("Error #01: Unkown input. Please, try again");
+        System.out.println("Error #01: Unkown input. Please, try again.");
         break;
     }
     
@@ -81,9 +81,8 @@ class SystemC
     {
       error(0);
     }
-    
+
     System.out.println("");
-    percent = percent/100 + 1;
     return percent;
   }
   
@@ -105,7 +104,7 @@ class SystemC
     {
       error(2);
     }
-    
+
     System.out.println("");
     return toDo;
   }
@@ -144,6 +143,7 @@ class SystemC
   {
     step = 6;
     System.out.println("Calculating...");
+    percent = percent/100 + 1;
     System.out.println("");
     
     if (toDo == 1)

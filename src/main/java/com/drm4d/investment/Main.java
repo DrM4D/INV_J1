@@ -7,8 +7,8 @@ public class Main
 {
   public static void main(String[] args)
   {
-    String version = "1.2";
-    String systemVersion = "J1AA3F05OC17";
+    String version = "1.3";
+    String systemVersion = "J1AA4F21OC17";
     SystemC s = new SystemC();
     s.intro();
     Main.start();
